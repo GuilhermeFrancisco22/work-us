@@ -1,0 +1,919 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.center {
+  max-width: 1440px;
+  padding: 0 2%;
+  margin: 0 auto;
+}
+
+/* =================Cabeçalho INICIO ===========================================*/
+
+.cabecalho {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 1px 10px 0 rgba(17, 17, 17, 0.7);
+  z-index: 1;
+}
+
+.cabecalho > .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 clamp(1em, 7vw, 5em);
+  /* fixar o conteudo */
+  position: sticky;
+  min-height: clamp(3.5em, 25vw, 5em);
+}
+
+.logo {
+  width: clamp(5em, 15vw, 10em);
+  text-align: center;
+  border: 3px solid black;
+  animation: logo 5s;
+  position: relative;
+}
+
+@keyframes logo {
+  from {
+    right: 100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+.logo a {
+  text-decoration: none;
+  font-family: "Rakkas", cursive;
+  font-size: clamp(1em, 3vw, 2em);
+  color: #000;
+}
+
+#burger {
+  display: none;
+}
+
+nav.menuDesktop {
+  width: min(36em, 60vw);
+  animation: nav 6s;
+  position: relative;
+}
+
+@keyframes nav {
+  from {
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+nav.menuDesktop ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav.menuDesktop a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(12.5px, 2vw, 1em);
+}
+
+nav.menuDesktop a:hover {
+  transition: 0.5s;
+  color: #da5f17;
+}
+
+/* =================Cabeçalo FIM ===========================================*/
+
+/* =================Sessao1 INICIO ===========================================*/
+
+.sessao1 > .center {
+  padding: 1em 0 2.5em 5em;
+  display: flex;
+  justify-content: space-between;
+  min-height: clamp(17em, 40vw, 29em);
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.intro {
+  display: grid;
+  align-content: space-evenly;
+  position: relative;
+  animation: intro 5s;
+}
+
+@keyframes intro {
+  from {
+    right: 130%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.intro-titulo {
+  width: min(30em, 60vw);
+}
+
+.intro-titulo h1 {
+  font-size: clamp(22px, 6vw, 3em);
+  text-align: left;
+  font-weight: bold;
+}
+
+.botao {
+  width: min(18em, 50vw);
+}
+
+.botao button {
+  font-size: min(1em, 3vw);
+  width: 100%;
+  cursor: pointer;
+  color: #fff;
+  background-color: #da5f17;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.banner1 {
+  position: relative;
+  animation: banner1 6s;
+  width: 45vw;
+}
+
+@keyframes banner1 {
+  0% {
+    width: 0;
+  }
+}
+
+.banner1 img {
+  width: 100%;
+}
+
+/* =================Sessao1 FIM ===========================================*/
+
+/* =================Sessao2 INICIO ===========================================*/
+
+.sessao2 {
+  padding: 2.5em 0;
+}
+
+.sessao2 > .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: clamp(17em, 40vw, 32em);
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.banner2,
+.banner5 {
+  width: 50%;
+  position: relative;
+  animation: banner2-5 5s;
+}
+
+@keyframes banner2-5 {
+  0% {
+    width: 0;
+  }
+}
+
+.banner2 img,
+.banner5 img {
+  width: 100%;
+}
+
+.introducao {
+  width: 40%;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  animation: introducao 5s;
+}
+@keyframes introducao {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.introducao h1 {
+  font-size: clamp(20px, 4vw, 2em);
+  color: #da5f17;
+  width: 75%;
+}
+
+.linha {
+  position: relative;
+}
+
+.linha > span {
+  width: 22%;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: #da5f17;
+  position: absolute;
+  animation: linha 5s infinite;
+}
+
+@keyframes linha {
+  0%,
+  100% {
+    left: 0;
+  }
+
+  50% {
+    left: 75%;
+  }
+}
+
+.introducao p {
+  font-size: clamp(15px, 1.5vw, 20px);
+  width: 80%;
+}
+
+/* =================Sessao2 FIM ===========================================*/
+
+/* =================Sessao3 INICIO ===========================================*/
+
+.sessao3 {
+  padding: 2.5em 0 2.5em 0;
+  overflow: hidden;
+}
+
+.sessao3 > .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  min-height: clamp(17em, 40vw, 32em);
+}
+
+.banner3,
+.banner4 {
+  width: 20%;
+  position: relative;
+  animation: sobre 5s;
+}
+
+.banner3 img,
+.banner3 img {
+  width: 100%;
+}
+
+.sobre {
+  max-width: clamp(20em, 50vw, 45em);
+  min-height: clamp(20em, 40vw, 20em);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  animation: sobre 5s;
+}
+
+@keyframes sobre {
+  0% {
+    opacity: 0;
+  }
+}
+
+.sobre h1 {
+  color: #da5f17;
+  font-size: clamp(20px, 4vw, 2em);
+}
+
+.linha2 {
+  position: relative;
+}
+
+.linha2 > span {
+  width: 30%;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: #da5f17;
+  display: block;
+  position: absolute;
+  animation: linhaDois 5s infinite;
+}
+
+@keyframes linhaDois {
+  0%,
+  100% {
+    left: -10%;
+  }
+
+  50%,
+  75% {
+    left: 75%;
+  }
+}
+
+.paragrafro {
+  width: clamp(17em, 50vw, 44.3em);
+  display: inline-block;
+}
+
+.paragrafro p {
+  font-size: clamp(16px, 1.5vw, 20px);
+}
+
+/* =================Sessao3 FIM ===========================================*/
+
+/* =================Sessao4 INICIO ===========================================*/
+
+.sessao4 {
+  background-color: #da5f17;
+  overflow: hidden;
+}
+
+.sessao4 > .center {
+  min-height: clamp(29em, 40vw, 32em);
+  display: grid;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.informacoes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.informacoes input {
+  display: none;
+}
+
+.info1 {
+  position: relative;
+  animation: info1 7s;
+}
+
+@keyframes info1 {
+  from {
+    opacity: 0;
+    left: 75%;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.info2 {
+  position: relative;
+  animation: info2 6s;
+}
+
+@keyframes info2 {
+  from {
+    opacity: 0;
+    left: 50%;
+  }
+
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.info3 {
+  position: relative;
+  animation: info3 6s;
+}
+
+@keyframes info3 {
+  from {
+    opacity: 0;
+    right: 50%;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.info4 {
+  position: relative;
+  animation: info4 7s;
+}
+
+@keyframes info4 {
+  from {
+    opacity: 0;
+    right: 75%;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.info {
+  width: clamp(15em, 20vw, 18em);
+  background-color: #fff;
+  height: 22em;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 9px 6px 0 rgba(17, 17, 17, 0.8);
+}
+
+.info > img {
+  width: 35%;
+}
+
+.info > div {
+  width: 100%;
+}
+
+.info > h1 {
+  font-size: 30px;
+}
+
+.info > div > div {
+  width: 85%;
+  padding: 3px;
+  border-radius: 10px;
+  background-color: #da5f17;
+  display: inline-block;
+}
+
+.info > p {
+  font-size: 17px;
+}
+
+.manual-navegacao {
+  display: none;
+}
+
+/* =================Sessao4 FIM ===========================================*/
+
+/* =================Sessao5 INICIO ===========================================*/
+
+.sessao5 > .center {
+  min-height: clamp(17em, 40vw, 32em);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.feedbacks {
+  position: relative;
+  animation: feedback 5s;
+}
+
+@keyframes feedback {
+  0% {
+    opacity: 0;
+  }
+}
+
+.feedback h1 {
+  color: #da5f17;
+  font-size: clamp(23px, 4vw, 2em);
+  text-align: center;
+}
+
+.slides {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 10em;
+}
+
+.slides > div > .prev,
+.slides > div > .next {
+  cursor: pointer;
+  color: #da5f17;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.slides > div > .prev:hover,
+.slides > div > .next:hover {
+  background-color: #a3440d;
+  transition: 1.5s;
+}
+
+.slides > .mySlides {
+  display: none;
+  width: 33em;
+}
+
+.caixaFeedback {
+  width: clamp(17em, 80vw, 25em);
+  min-height: clamp(6em, 35vw, 7em);
+  border: 3px solid #da5f17;
+  box-shadow: 0 6px 6px 0 rgba(17, 17, 17, 0.8);
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cliente {
+  width: clamp(3.7em, 15vw, 5.2em);
+}
+
+.cliente img {
+  width: 100%;
+}
+
+.infoCliente {
+  width: clamp(11em, 45vw, 14em);
+}
+
+.infoCliente h1 {
+  font-size: clamp(18px, 5vw, 1.25em);
+  color: #da5f17;
+}
+
+.infoCliente p {
+  font-size: clamp(13px, 3vw, 15px);
+}
+
+.botoes2 {
+  text-align: end;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.dot {
+  cursor: pointer;
+  width: min(1.25em, 5vw);
+  height: min(1.25em, 5vw);
+  margin: 0 2px;
+  background-color: #da5f17;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.ativo,
+.dot:hover {
+  background-color: #a3440d;
+  transition: 1s;
+  padding: 7px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =================Sessao5 FIM ===========================================*/
+
+/* =================Rodape INICIO ===========================================*/
+
+.rodape > .center {
+  min-height: 6.25em;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: grid;
+}
+
+.infoFinal {
+  width: clamp(20em, 40vw, 23em);
+  margin: 0 auto;
+}
+
+.infoFinal p {
+  font-size: clamp(14px, 3vw, 1em);
+  text-align: center;
+}
+
+.animate {
+  animation-play-state: paused;
+}
+
+.visible {
+  animation-play-state: running;
+}
+
+/* =================Rodape FIM ===========================================*/
+
+/* breaking point:
+ (1200px Telas Maiores Desktop e Tvs)
+ (1024px Desktop)
+ (768px  Laptops)
+ (480px Tablets)() */
+
+/* =================Responsividade 1200px INICIO ===========================================*/
+
+@media (max-width: 1200px) {
+  .cabecalho > .center {
+    justify-content: space-between;
+  }
+
+  .logo {
+    animation-duration: 0s;
+  }
+
+  #burger {
+    display: block;
+    width: clamp(40px, 6vw, 65px);
+  }
+
+  nav.menuDesktop {
+    opacity: 0;
+    animation-duration: 0s;
+  }
+
+  nav.menuDesktop a:hover {
+    color: black;
+  }
+
+  /* =================Sessao1 Responsiva INICIO ===========================================*/
+
+  .sessao1 > .center {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .banner1 {
+    display: none;
+  }
+
+  .intro {
+    justify-items: center;
+  }
+
+  .intro h1 {
+    text-align: center;
+  }
+
+  .botao {
+    display: grid;
+    justify-items: center;
+  }
+
+  /* =================Sessao1 Responsiva FIM ===========================================*/
+
+  /* =================Sessao2 Responsiva INICIO ===========================================*/
+
+  .sessao2 > .center {
+    position: relative;
+  }
+
+  .banner2 {
+    animation: 0s;
+    width: 100%;
+    opacity: 0.7;
+  }
+
+  .introducao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-evenly;
+    box-shadow: 0 5px 10px 0 rgba(17, 17, 17, 0.7);
+    background-color: #fff;
+    border-radius: 5px;
+    width: clamp(18em, 90vw, 50em);
+    height: clamp(17em, 30vw, 20em);
+    padding: 0 min(2em, 3vw);
+  }
+  @keyframes introducao {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .introducao h1 {
+    width: auto;
+    text-align: center;
+  }
+
+  .introducao p {
+    width: auto;
+    text-align: center;
+  }
+
+  .linha {
+    display: grid;
+    justify-items: center;
+  }
+
+  .linha > span {
+    animation: 0s;
+    margin: 0 auto;
+  }
+
+  /* =================Sessao2 Responsiva FIM ===========================================*/
+
+  /* =================Sessao4 Responsiva INICIO ===========================================*/
+
+  .sessao4 > .center {
+    overflow: hidden;
+  }
+
+  .informacoes {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info2,
+  .info3,
+  .info4 {
+    display: none;
+  }
+
+  .info {
+    animation-duration: 0s;
+    opacity: 1;
+  }
+
+  .manual-navegacao {
+    margin: 2em 0 0 0;
+    display: flex;
+  }
+
+  .manual-navegacao label:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  .manual-btn {
+    width: min(1.25em, 6vw);
+    height: min(1.25em, 6vw);
+    border: 2px solid #a3440d;
+    border-radius: 50%;
+    transition: 1s;
+  }
+
+  .manual-btn:hover {
+    background-color: #fff;
+  }
+
+  /* ================= Radio1 INICIO ===========================================*/
+
+  #radio1:checked ~ .first {
+    display: flex;
+  }
+
+  #radio2:checked ~ .first,
+  #radio3:checked ~ .first,
+  #radio4:checked ~ .first {
+    display: none;
+  }
+
+  /* ================= Rado1 FIM ===========================================*/
+
+  /* ================= Radio2 INICIO ===========================================*/
+
+  #radio2:checked ~ .first2 {
+    display: flex;
+  }
+
+  #radio1:checked ~ .first2,
+  #radio3:checked ~ .first2,
+  #radio4:checked ~ .first2 {
+    display: none;
+  }
+
+  /* ================= Radio2 FIM ===========================================*/
+
+  /* ================= Radio3 INICIO ===========================================*/
+
+  #radio3:checked ~ .first3 {
+    display: flex;
+  }
+
+  #radio1:checked ~ .first3,
+  #radio2:checked ~ .first3,
+  #radio4:checked ~ .first3 {
+    display: none;
+  }
+
+  /* ================= Radio3 FIM ===========================================*/
+
+  /* ================= Radio4 INICIO ===========================================*/
+
+  #radio4:checked ~ .first4 {
+    display: flex;
+  }
+
+  #radio1:checked ~ .first4,
+  #radio2:checked ~ .first4,
+  #radio3:checked ~ .first4 {
+    display: none;
+  }
+
+  /* ================= Radio4 FIM ===========================================*/
+
+  /* =================Sessao4 Responsiva FIM ===========================================*/
+
+  /* =================Sessao5 Responsiva INICIO ===========================================*/
+
+  .sessao5 > .center {
+    justify-content: center;
+  }
+
+  .banner5 {
+    display: none;
+  }
+
+  .botoes2 {
+    text-align: center;
+  }
+
+  .slides > div > .prev:hover,
+  .slides > div > .next:hover {
+    background-color: transparent;
+  }
+
+  /* =================Sessao5 Responsiva FIM ===========================================*/
+}
+
+@media (max-width: 600px) {
+  nav.menuDesktop ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sessao3 > .center {
+    justify-content: center;
+  }
+
+  .banner3,
+  .banner4 {
+    display: none;
+  }
+
+  .next,
+  .prev {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sessao2 {
+    background-color: #da5f17;
+  }
+  .sessao2 > .center {
+    justify-content: center;
+  }
+
+  .banner2 {
+    display: none;
+  }
+
+  .introducao {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
